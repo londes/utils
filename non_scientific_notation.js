@@ -12,8 +12,8 @@ function toFixed(x) {
         console.log("we\'re in the high side and x is: " + x);
         let e = parseInt(x.toString().split('+')[1]);
         console.log("and e is: " + e);
-        if (e < 20) {
-            e -= 20;
+        if (e > 18) {
+            e -= 18;
             x /= Math.pow(10,e);
             x += (new Array(e+1).join('0'));
         }
@@ -21,4 +21,6 @@ function toFixed(x) {
     return x;
 }
 
-console.log(toFixed(9.332621544394418e+157));
+let value = toFixed(9.332621544394418e+157);
+console.log(value);
+console.log(value.toString().length);
