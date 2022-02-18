@@ -1,6 +1,8 @@
 // Utility intended to remove scientific notation from a number and return an actual integer for large numbers
 
-function toFixed(x) {
+// Please note that this currently appears to work, but sometimes the last value in the output number will change from the input value. Caused an incorrect guess in project euler. Something here is wrong.
+
+exports.toFixed = function(x) {
     if (Math.abs(x) < 1.0) {
         console.log("we\'re in the low side and x is: " + x);
         let e = parseInt(x.toString().split('e-')[1]);
